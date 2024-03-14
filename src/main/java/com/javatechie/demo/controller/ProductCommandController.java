@@ -21,7 +21,7 @@ public class ProductCommandController {
     }
 
     @PutMapping("/{id}")
-    public Product updateProduct(@PathVariable long id, ProductEvent productEvent) {
+    public Product updateProduct(@PathVariable long id, @RequestBody ProductEvent productEvent) {
         return service.updateProduct(id, productEvent);
 
     }
